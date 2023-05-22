@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import EventList from '../components/EventList';
 import EventDetail from '../components/EventDetail';
+import CategoryList from '../components/CategoryList';
 
 const EventContainer = () => {
 
@@ -26,6 +27,7 @@ const EventContainer = () => {
 
     return (
         <>
+        <CategoryList events={events}/>
         <EventList events={events} handleEventSelect={handleEventSelect}/>
         <EventDetail event={selectedEvent}/>
         </>

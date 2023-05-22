@@ -10,6 +10,7 @@ const EventList = ({events, handleEventSelect}) => {
     return (
         <div>
             <select onChange={handleEventSelect}>
+            <option disabled selected placeholder>Select an event</option>
             {listOfEvents}
             </select>
         </div>
