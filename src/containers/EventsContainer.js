@@ -7,6 +7,7 @@ const EventContainer = () => {
 
     const [events, setEvents] = useState([]);
     const [selectedEvent, setSelectedEvent] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("");
 
     useEffect(() => {getEvents();}, [])
 
@@ -25,10 +26,21 @@ const EventContainer = () => {
         setSelectedEvent(findEvent)
     }
 
+    const handleCategorySelected = (event) => {
+        setSelectedCategory(event.target.value)
+    }
+
+    let filteredEvents = []
+    if (selectedCategory) { 
+        filteredEvents = events.filter((event) => {
+            return event.categories[0].title === selectedCategory
+        })
+    }
+
     return (
         <>
-        <CategoryList events={events}/>
-        <EventList events={events} handleEventSelect={handleEventSelect}/>
+        <CategoryList events={events} handleCategorySelected={handleCategorySelected}/>
+        <EventList events={filteredEvents} handleEventSelect={handleEventSelect}/>
         <EventDetail event={selectedEvent}/>
         </>
     )

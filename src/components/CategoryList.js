@@ -1,4 +1,4 @@
-const CategoryList = ({events}) => {
+const CategoryList = ({events, handleCategorySelected}) => {
     const listOfCategories = events.map((event, index) => {
         return (
             // <option value={event.categories[0].id} key={index}>{event.categories[0].title}</option>
@@ -14,7 +14,7 @@ const CategoryList = ({events}) => {
 
     return (
         <div>
-            <select>
+            <select onChange={handleCategorySelected}>
                 {arrayOfUniqueCategories}
             </select>
         </div>
