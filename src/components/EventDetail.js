@@ -17,13 +17,11 @@ const EventDetail = ({event}) => {
         <p>This event is in the category of: {event.categories[0].title}</p>
         <p>Latest information on date - {(event.geometry[0].date).substr(0, 10)}</p>
         <MapContainer center={latAndLong} zoom={8} scrollWheelZoom={false}>
-  <TileLayer
-    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  />
-  <Marker position={latAndLong}>
-  </Marker>
-</MapContainer>
+        <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        </MapContainer>
         </>
     }
 
