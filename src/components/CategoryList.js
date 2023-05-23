@@ -15,6 +15,7 @@ const CategoryList = ({events, handleCategorySelected}) => {
     return (
         <div>
             <select onChange={handleCategorySelected}>
+            <option disabled selected placeholder>Select a category</option>
                 {arrayOfUniqueCategories}
             </select>
         </div>
