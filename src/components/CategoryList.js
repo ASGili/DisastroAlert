@@ -10,7 +10,7 @@ const CategoryList = ({events, handleCategorySelected}) => {
     const arrayOfUniqueCategories = [... setOfUniqueCategories].map((title, index) => {
         // original code:
         // return <option>{title}</option>
-        return <li key={index} value={title} onClick={handleCategorySelected}><Link to={"/disaster/" + title}>{title}</Link></li>
+        return <li key={index} value={title}><Link to={"/disaster/" + title} onClick={handleCategorySelected}>{title}</Link></li>
     })
 
     return (

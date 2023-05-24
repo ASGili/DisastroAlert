@@ -23,8 +23,8 @@ const EventContainer = () => {
     .then(events => setEvents(events.events))
     }
 
-    const handleEventSelect = (id) => {
-        const eventID = id.target.value
+    const handleEventSelect = (event) => {
+        const eventID = event.target.value
         const findEvent = events.find((event) => {
             return eventID === event.id
         })
@@ -33,6 +33,7 @@ const EventContainer = () => {
 
     const handleCategorySelected = (event) => {
         setSelectedCategory(event.target.textContent)
+        
     }
 
     let filteredEvents = []
