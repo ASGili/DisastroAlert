@@ -9,8 +9,9 @@ import '../App.css';
 const EventContainer = () => {
 
     const [events, setEvents] = useState([]);
-    const [selectedEvent, setSelectedEvent] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("");
+    const [selectedEvent, setSelectedEvent] = useState("");
+    
 
     useEffect(() => {getEvents();}, [])
 

@@ -9,10 +9,10 @@ const CategoryList = ({events, handleCategorySelected}) => {
 
     const setOfUniqueCategories = new Set(listOfCategories)
 
-    const arrayOfUniqueCategories = [... setOfUniqueCategories].map((title) => {
+    const arrayOfUniqueCategories = [... setOfUniqueCategories].map((title, index) => {
         // original code:
         // return <option>{title}</option>
-        return <li><Link to={"/disaster/" + title}>{title}</Link></li>
+        return <li key={index}><Link to={"/disaster/" + title}>{title}</Link></li>
     })
 
     return (
@@ -23,13 +23,10 @@ const CategoryList = ({events, handleCategorySelected}) => {
         //         {arrayOfUniqueCategories}
         //     </select>
         // </div>
-
-        <div>
-            <ul>
+        <ul>
             {arrayOfUniqueCategories}
-            </ul>
-        </div>
-    )
+        </ul>
+        )
 }
 
 
