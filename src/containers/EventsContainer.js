@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import EventList from '../components/EventList';
 import EventDetail from '../components/EventDetail';
 import CategoryList from '../components/CategoryList';
+
 import '../App.css';
 
 
