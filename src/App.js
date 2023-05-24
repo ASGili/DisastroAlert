@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<EventContainer />}/>
         <Route path="/home" element={<EventContainer />}/>
         <Route path="/disaster/:category" element={<EventContainer />}/>
+        <Route path="/disaster/:id" element={<EventContainer />}/>
       </Routes>
     </Router>
   );

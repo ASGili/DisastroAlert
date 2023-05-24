@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useParams from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import EventList from '../components/EventList';
 import EventDetail from '../components/EventDetail';
 import CategoryList from '../components/CategoryList';
@@ -11,11 +11,13 @@ const EventContainer = () => {
     const [selectedCategory, setSelectedCategory] = useState("");
     const [selectedEvent, setSelectedEvent] = useState("");
     
+    const {category} = useParams()
 
     useEffect(() => {getEvents();}, [])
+    useEffect(() => {setSelectedCategory(category);}, [])
 
     const getEvents = function(){
-
+        console.log("getEvents")
     fetch('https://eonet.gsfc.nasa.gov/api/v3/events')
     .then(res => res.json())
     .then(events => setEvents(events.events))
@@ -30,7 +32,6 @@ const EventContainer = () => {
     }
 
     const handleCategorySelected = (event) => {
-        console.log(event.target.textContent)
         setSelectedCategory(event.target.textContent)
     }
 

@@ -23,6 +23,7 @@ const CategoryList = ({events, handleCategorySelected}) => {
         // </div>
 
         <ul className="list">
+        <h3>Choose a disaster category: </h3>
             {arrayOfUniqueCategories}
         </ul>
         )
