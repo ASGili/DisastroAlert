@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import useParams from 'react-router-dom'
 import EventList from '../components/EventList';
 import EventDetail from '../components/EventDetail';
 import CategoryList from '../components/CategoryList';
-
-import '../App.css';
 
 
 const EventContainer = () => {
@@ -31,7 +30,8 @@ const EventContainer = () => {
     }
 
     const handleCategorySelected = (event) => {
-        setSelectedCategory(event.target.value)
+        console.log(event.target.textContent)
+        setSelectedCategory(event.target.textContent)
     }
 
     let filteredEvents = []
