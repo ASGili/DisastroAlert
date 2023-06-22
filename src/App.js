@@ -8,9 +8,9 @@ function App() {
     <h1>DisastroAlert</h1>
       <Routes>
         <Route path="*" element={<ErrorPage/>}/>
-        <Route path="/" element={<EventContainer />}/>
-        <Route path="/home" element={<EventContainer />}/>
-        <Route path="/disaster/:category" element={<EventContainer />}/>
+        <Route path="/DisastroAlert/" element={<EventContainer />}/>
+        <Route path="/DisastroAlert/home/" element={<EventContainer />}/>
+        <Route path="/DisastroAlert/disaster/:category" element={<EventContainer />}/>
       </Routes>
     </Router>
   );
