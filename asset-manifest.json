@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DisastroAlert/static/css/main.a26ef6d6.css",
-    "main.js": "/DisastroAlert/static/js/main.9d38fc91.js",
+    "main.js": "/DisastroAlert/static/js/main.6753c766.js",
     "static/js/787.02f07cb5.chunk.js": "/DisastroAlert/static/js/787.02f07cb5.chunk.js",
     "index.html": "/DisastroAlert/index.html",
     "main.a26ef6d6.css.map": "/DisastroAlert/static/css/main.a26ef6d6.css.map",
-    "main.9d38fc91.js.map": "/DisastroAlert/static/js/main.9d38fc91.js.map",
+    "main.6753c766.js.map": "/DisastroAlert/static/js/main.6753c766.js.map",
     "787.02f07cb5.chunk.js.map": "/DisastroAlert/static/js/787.02f07cb5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a26ef6d6.css",
-    "static/js/main.9d38fc91.js"
+    "static/js/main.6753c766.js"
   ]
 }
