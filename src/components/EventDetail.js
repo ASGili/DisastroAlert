@@ -17,7 +17,7 @@ const EventDetail = ({event}) => {
       }
 
     let declareCategory 
-    if (event.categories) {
+    if (event) {
         declareCategory = 
         <>
         <h3>{event.title}</h3>
