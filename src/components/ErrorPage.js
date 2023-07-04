@@ -4,7 +4,7 @@ const ErrorPage = ()=> {
     return (
     <div>
     <h1>404 - PAGE NOT FOUND</h1>
-    <Link to="/home">Return to home page</Link>
+    <Link to="/DisastroAlert">Return to home page</Link>
     </div>
     )
 }
